@@ -10,6 +10,7 @@ Group:		Emulators
 License:	GPLv2+
 URL:		http://fceultra.sourceforge.net/
 Source0:	http://fceultra.sourceforge.net/releases/%name-%version.src.tar.bz2
+Patch0:		fceux-2.1.5-gcc46.patch
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	scons
 BuildRequires:  lua5.1-devel
@@ -27,6 +28,7 @@ compatibility.
 
 %prep
 %setup -q -c
+%patch0 -p0
 
 %build
 cd fceu%{version}
