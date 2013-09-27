@@ -1,13 +1,12 @@
 Summary:	NES emulator
 Name:		fceux
-Version:	2.2.1
+Version:	2.2.2
 Release:	1
-Group:		Emulators
 License:	GPLv2+
-URL:		http://fceultra.sourceforge.net/
+Group:		Emulators
+Url:		http://fceultra.sourceforge.net/
 Source0:	http://fceultra.sourceforge.net/releases/%{name}-%{version}.src.tar.gz
 Patch0:		fceux-2.1.5-gcc46.patch
-Patch1:		fceux-2.2.1-sfmt.patch
 BuildRequires:	scons
 BuildRequires:	lua5.1-devel
 BuildRequires:	pkgconfig(gtk+-2.0)
@@ -22,10 +21,18 @@ Disk System (FDS) emulator. It supports both PAL (European) and NTSC
 (USA/JPN) modes. It supports both Windows and SDL versions for cross
 compatibility.
 
+%files
+%doc Authors changelog.txt NewPPUtests.txt README-SDL TODO*
+%doc documentation/
+%{_bindir}/%{name}
+%{_mandir}/man6/%{name}.6*
+%{_datadir}/applications/mandriva-%{name}.desktop
+
+#----------------------------------------------------------------------------
+
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %setup_compile_flags
@@ -48,12 +55,4 @@ Type=Application
 StartupNotify=true
 Categories=Game;Emulator;
 EOF
-
-
-%files
-%doc Authors changelog.txt NewPPUtests.txt README-SDL TODO*
-%doc documentation/
-%{_bindir}/%{name}
-%{_mandir}/man6/%{name}.6*
-%{_datadir}/applications/mandriva-%{name}.desktop
 
