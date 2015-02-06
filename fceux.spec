@@ -1,7 +1,7 @@
 Summary:	NES emulator
 Name:		fceux
 Version:	2.2.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Emulators
 Url:		http://fceultra.sourceforge.net/
