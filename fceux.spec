@@ -4,7 +4,7 @@ Version:	2.2.2
 Release:	2
 License:	GPLv2+
 Group:		Emulators
-Url:		http://fceultra.sourceforge.net/
+Url:		https://fceultra.sourceforge.net/
 Source0:	http://fceultra.sourceforge.net/releases/%{name}-%{version}.src.tar.gz
 Patch0:		fceux-2.1.5-gcc46.patch
 BuildRequires:	scons
